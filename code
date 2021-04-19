@@ -1,0 +1,67 @@
+C++从小到大进行冒泡排序：
+#include<iostream>
+using namespace std;
+int main()
+{
+	int i, j, k;
+	int a[10];
+	cout << "请输入10个整数:" ;
+	for (i = 0; i < 10; i++)
+	{
+		cin >> a[i];
+	}
+	for (j = 0; j < 9; j++)
+	{
+		for (i = 0; i < 9 - j; i++)
+		{
+			if (a[i] > a[i + 1])
+			{
+				k = a[i];
+				a[i] = a[i + 1];
+				a[i + 1] = k;
+			}
+		}
+	}
+	cout << endl << "输出从小到大冒泡排序后的10个整数：";
+		for (i = 0; i < 10; i++)
+		{
+			cout << a[i]<<' ';
+	}
+		cout << endl;
+		system("pause");
+	return 0;
+}
+C++从大到小进行冒泡排序：
+//输入10个整数进行冒泡排序
+#include<iostream>
+using namespace std;
+int main()
+{
+	int i, j, k;
+	int a[10];
+	cout << "请输入10个整数:" ;
+	for (i = 0; i < 10; i++)
+	{
+		cin >> a[i];
+	}
+	for (j = 0; j < 9; j++)
+	{
+		for (i = 0; i < 9 - j; i++)
+		{
+			if (a[i] < a[i + 1])
+			{
+				k = a[i];
+				a[i] = a[i + 1];
+				a[i + 1] = k;
+			}
+		}
+	}
+	cout << endl << "输出从大到小冒泡排序后的10个整数：";
+		for (i = 0; i < 10; i++)
+		{
+			cout << a[i]<<' ';
+	}
+		cout << endl;
+		system("pause");
+	return 0;
+}
